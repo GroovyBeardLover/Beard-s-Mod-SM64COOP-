@@ -191,9 +191,7 @@ hook_on_sync_table_change(gGlobalSyncTable, "bmodHostOnly", nil, function (tag, 
     if network_is_server() then return end
 
     if newVal == true then
-        SEARCH_MENU = false
-        SPAWN_MENU_2 = false
-        SPAWN_MENU = false
+        CURRENT_MENU = nil
         SPAWNING = false
         camera_unfreeze()
         if CURRENT_OBJ ~= nil then
